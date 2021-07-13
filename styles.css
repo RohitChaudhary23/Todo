@@ -1,0 +1,163 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: linear-gradient(120deg, #e2c35d, #d88771);
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.container {
+	width: 22rem;
+	margin: 5rem auto;
+	min-height: 20vh;
+	background-color: white;
+	border-radius: 1rem;
+	box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+	text-align: center;
+	padding: 2rem;
+}
+
+h1 {
+	text-align: left;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0.5rem 0;
+}
+
+input {
+	height: 2rem;
+	width: 90%;
+	padding: 0.5rem;
+	margin-right: 5px;
+	outline: none;
+}
+
+.addButton {
+	background-color: rgb(142, 73, 233);
+	color: white;
+	cursor: pointer;
+	padding: 0.5rem;
+	width: 2rem;
+	height: 2rem;
+	transition: all 0.5s ease;
+}
+
+.fa-plus {
+	color: white;
+}
+
+select {
+	/*remove default styles from it*/
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	box-shadow: none;
+	border: none;
+}
+
+.select {
+	margin: 1rem 0;
+	height: 2rem;
+	position: relative;
+	overflow: hidden;
+}
+
+select {
+	color: rgb(142, 73, 233);
+	width: 100%;
+	padding: 0.5rem;
+	border-bottom: 1px solid rgb(142, 73, 233);
+	cursor: pointer;
+}
+
+.select::after {
+	content: '\25BC';
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: white;
+	background-color: rgb(142, 73, 233);
+	padding: 0.5rem;
+	pointer-events: none;
+	transition: all 0.5s ease;
+}
+
+.select:hover::after {
+	background-color: white;
+	color: rgb(142, 73, 233);
+	border: 1px solid rgb(142, 73, 233);
+}
+
+.todoList {
+	margin-top: 2rem;
+	display: grid;
+	grid-gap: 0.5rem;
+}
+
+.todo {
+	background-color: #f2f2f2;
+	display: flex;
+	justify-content: space-between;
+	transition: all 0.5s ease;
+}
+
+.todoItem {
+	text-align: left;
+	padding: 0.5rem;
+	flex: 1;
+	transition: all 0.5s ease;
+}
+
+.deleteButton, .completeButton {
+	background-color: red;
+	color: white;
+	width: 2rem;
+	padding: .5rem;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.fa-trash, .fa-check {
+	pointer-events: none;
+}
+
+.completeButton {
+	background-color: green;
+	margin-right: 5px;
+}
+
+.workDone {
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+
+.removeTodo {
+	transform: translateY(15rem) rotateZ(60deg) ;
+	opacity: 0;
+}
+
+.todoStatus {
+	display: none;
+	margin-top: 2rem;
+}
+
+.status {
+	padding: 0.5rem;
+}
+
+button {
+	color: white;
+	background-color: rgb(142, 73, 233);
+	padding: 0.5rem;
+	border: none;
+	cursor: pointer;
+}
